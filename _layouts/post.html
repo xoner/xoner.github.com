@@ -1,5 +1,30 @@
 ---
 layout: default
+comments: true
 ---
-{% include JB/setup %}
-{% include themes/twitter/post.html %}
+<article>
+    <header>
+        <h2><a href="{{page.url}}">{{page.title}}</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">{{page.date | date:"%Y-%m-%d"}}</span> per <span class="author">{{page.author}}</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        {{ content }}
+    </p>
+    <div class="row">
+        <div class="span4 category">
+            <h4>Publicat en</h4>
+            <span class="label">{{page.category}}</span>
+        </div>
+        <div class="span4 tags">
+            <h4>Etiquetes</h4>
+            {% for itTag in page.tags %}
+            <span class="badge">{{itTag}}</span>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="disqus_thread"></div>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</article>

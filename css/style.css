@@ -1,0 +1,77 @@
+body{
+    background: url('/img/background.jpg');
+}
+
+#main-header{
+    font-family: archiveregular, Arial, Verdana;
+    color: red;
+    font-size: 2.5em;
+}
+
+#main-header a, #main-header a:visited{
+    text-decoration: none;
+    color: red;
+}
+
+h2, h3, h4{
+    font-family: bariol_regular, Arial, Verdana;
+}
+
+
+.highlight{
+    font-family: 'Source Code Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sidebar{
+    padding-top: 40px;
+}
+
+.sidebar .slogan{
+    font-family: bariol_regular, Arial, Verdana;
+}
+
+.main-content{
+    box-shadow: -5px -3px 10px #888;
+    padding: 0 25px 50px 25px;
+    background-color: #fff;
+}
+
+.main-content article{
+    margin-top: 50px;
+}
+
+.info{
+    font-size: 0.8em;
+    margin-top: -15px;
+}
+
+.main-content article header h1{
+    font-family: bariol_regular, Arial, Verdana;
+    font-weight: bold;
+}
+
+
+.links-collection li{
+    list-style: none;
+}
+
+.links-collection a{
+    text-decoration: none;
+    color: #000;
+}
+
+#disqus_thread{
+    margin-top: 30px;
+}
+
+#footer-separator{
+    background-image: url('/img/separator.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+}
+
+footer{
+    margin-top: 15px;
+    text-align: center;
+}

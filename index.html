@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{% for itPost in site.posts limit:10 %}
+<article>
+    <header>
+        <h2><a href="{{itPost.url}}">{{itPost.title}}</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">{{itPost.date | date:"%Y-%m-%d"}}</span> per <span class="author">{{itPost.author}}</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        {{ itPost.content }}
+    </p>
+    <div class="row">
+        <div class="span4 category">
+            <h4>Publicat en</h4>
+            <span class="label">{{itPost.category}}</span>
+        </div>
+        <div class="span4 tags">
+            <h4>Etiquetes</h4>
+            {% for itTag in itPost.tags %}
+            <span class="badge">{{itTag}}</span>
+            {% endfor %}
+        </div>
+    </div>
+</article>
+{% endfor %}
