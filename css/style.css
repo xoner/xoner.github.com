@@ -1,11 +1,14 @@
 body{
     background: url('/img/background.jpg');
+    font-family: 'Merriweather', sans-serif;
+    text-align: justify;
 }
 
 #main-header{
-    font-family: archiveregular, Arial, Verdana;
+    font-family: 'Raleway', sans-serif;
     color: red;
     font-size: 2.5em;
+    text-align: center;
 }
 
 #main-header a, #main-header a:visited{
@@ -14,9 +17,12 @@ body{
 }
 
 h2, h3, h4{
-    font-family: bariol_regular, Arial, Verdana;
+    font-family: 'Raleway', sans-serif;
 }
 
+.tags *, .category *{
+    font-family: Lato, Arial, Verdana
+}
 
 .highlight{
     font-family: 'Source Code Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -46,7 +52,7 @@ h2, h3, h4{
 }
 
 .main-content article header h1{
-    font-family: bariol_regular, Arial, Verdana;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
 
