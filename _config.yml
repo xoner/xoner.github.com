@@ -1,5 +1,5 @@
 title: "Xoner's blog"
-slogan: "Plana web i blog personal de David Pascual Rocher. Desenvolupador web, sysadim, i més."
+slogan: "Plana web i blog personal de David Pascual Rocher. Desenvolupador web, sysadmin, "
 url: xoner.org
 
 author:
@@ -9,4 +9,5 @@ author:
     github: https://github.com/xoner
     linkedin: http://es.linkedin.com/pub/david-pascual-rocher/b/241/840
 
+markdown: kramdown
 pygments: true

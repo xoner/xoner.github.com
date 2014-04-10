@@ -14,11 +14,11 @@ layout: default
         {{ itPost.content }}
     </p>
     <div class="row">
-        <div class="span4 category">
+        <div class="col-md-4 category">
             <h4>Publicat en</h4>
-            <span class="label">{{itPost.category}}</span>
+            <span class="label label-default">{{itPost.category}}</span>
         </div>
-        <div class="span4 tags">
+        <div class="col-md-4 tags">
             <h4>Etiquetes</h4>
             {% for itTag in itPost.tags %}
             <span class="badge">{{itTag}}</span>
