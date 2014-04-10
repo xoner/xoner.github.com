@@ -13,7 +13,7 @@ En el mundillo unix fer un script executable es quelcom tan senzil com donar-li 
 1. Obrir el editor de registre de windows i sobre la clau HKEY_CLASS_ROOT crear una nova clau amb l’extensió que volem fer executable (en el nostre cas “.py”)
 2. Sobre aquesta nova clau que hem creat, crear nou valor amb aquestos valors:
 
-<table class="table table-bordered" style="width:475px;margin:0 auto">
+<table class="table table-bordered" style="max-width:475px;margin:0 auto">
     <thead>
         <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
     </thead>
@@ -24,7 +24,7 @@ En el mundillo unix fer un script executable es quelcom tan senzil com donar-li 
 
 3. Sobre aquesta nova clau que hem creat en el valor predeterminat canviar les dades per a que quede de la següent forma:
 
-<table class="table table-bordered" style="width:475px;margin:0 auto">
+<table class="table table-bordered" style="max-width:475px;margin:0 auto">
     <thead>
         <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
     </thead>
@@ -38,7 +38,8 @@ En el mundillo unix fer un script executable es quelcom tan senzil com donar-li 
 1.Sobre la clau HKEY_CLASS_ROOT crear una nova clau amb el valor de les dades en el valor predeterminat, valor introduït en el punt anterior (En el nostre cas “IronPython.File”)
 2.Sobre la clau creada en el pas anterior crear una sub clau anomenada shell
 3.Sobre la clau creada en el pas anterior crear una sub clau anomenada open, editar la clau predeterminada per a que tinga els següents valors:
-<table class="table table-bordered" style="width:475px;margin:0 auto">
+
+<table class="table table-bordered" style="max-width:475px;margin:0 auto">
     <thead>
         <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
     </thead>
@@ -46,10 +47,11 @@ En el mundillo unix fer un script executable es quelcom tan senzil com donar-li 
         <tr><td>(Predeterminado)</td><td>REG_SZ</td><td>Open</td></tr>
     </tbody>
 </table>
+
 4.Sobre la clau creada en el pas anterior crear una sub clau anomenada command
 5.Editar el valor predeterminat de la clau creada en el pas anterior per a que quede de la següent forma:
 
-<table class="table table-bordered" style="width:645px;margin:0 auto">
+<table class="table table-bordered" style="max-width:645px;margin:0 auto">
     <thead>
         <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
     </thead>
