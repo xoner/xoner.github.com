@@ -7641,60 +7641,66 @@ h2, h3, h4 {
 .sidebar .slogan {
   font-family: Raleway, Arial, Verdana;
 }
+/* line 47, ../_sass/styles.scss */
+.sidebar .gravatar img {
+  margin: 0 auto;
+  display: block;
+  border: 3px solid #3F3F3F;
+}
 
-/* line 49, ../_sass/styles.scss */
+/* line 55, ../_sass/styles.scss */
 .main-content {
   box-shadow: 0px -3px 10px #888;
   padding: 0 25px 50px 25px;
   background-color: #fff;
 }
-/* line 54, ../_sass/styles.scss */
+/* line 60, ../_sass/styles.scss */
 .main-content article {
   margin-top: 50px;
 }
-/* line 58, ../_sass/styles.scss */
+/* line 64, ../_sass/styles.scss */
 .main-content article header h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
 }
-/* line 63, ../_sass/styles.scss */
+/* line 69, ../_sass/styles.scss */
 .main-content article footer {
   border-top: 2px dotted #49483E;
 }
 
-/* line 68, ../_sass/styles.scss */
+/* line 74, ../_sass/styles.scss */
 .info {
   font-family: 'Raleway', sans-serif;
   font-size: 0.8em;
   margin-top: -10px;
 }
 
-/* line 74, ../_sass/styles.scss */
+/* line 80, ../_sass/styles.scss */
 .links {
   text-align: center;
 }
 
-/* line 78, ../_sass/styles.scss */
+/* line 84, ../_sass/styles.scss */
 .links-collection {
   padding: 0;
 }
-/* line 81, ../_sass/styles.scss */
+/* line 87, ../_sass/styles.scss */
 .links-collection li {
   list-style: none;
   display: inline-block;
 }
-/* line 86, ../_sass/styles.scss */
+/* line 92, ../_sass/styles.scss */
 .links-collection a {
   text-decoration: none;
   color: #000;
 }
 
-/* line 93, ../_sass/styles.scss */
+/* line 99, ../_sass/styles.scss */
 #disqus_thread {
   margin-top: 30px;
 }
 
-/* line 97, ../_sass/styles.scss */
+/* line 103, ../_sass/styles.scss */
 #footer-separator {
   background-image: url("/img/separator.png");
   background-position: center;
@@ -7702,7 +7708,7 @@ h2, h3, h4 {
   margin-top: 25px;
 }
 
-/* line 104, ../_sass/styles.scss */
+/* line 110, ../_sass/styles.scss */
 footer {
   margin-top: 15px;
   text-align: center;
