@@ -1,0 +1,457 @@
+<html lang="ca-es">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Source Code Pro&subset=latin" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <meta charset="utf-8">
+    <title>Xoner's blog</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="/css/pygments-zenburn.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <div class="gravatar">
+                    <img src="http://www.gravatar.com/avatar/2c8b92bb34b04196e94c5cfa6bba2cde?s=150" alt="gravatar-image" class="img-circle">
+                </div>
+                <h1 id="main-header"><a href="/">Xoner's blog</a></h1>
+                <p class="slogan hidden-phone">
+                    Plana web i blog personal de David Pascual Rocher. Desenvolupador web i sysadmin.
+                </p>
+                <div class="links hidden-phone">
+    <ul class="links-collection">
+        <li>
+            <a href="https://github.com/xoner">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/xoner81">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="http://es.linkedin.com/pub/david-pascual-rocher/b/241/840">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+            <div class="col-md-9 main-content">
+                
+<article>
+    <header>
+        <h2><a href="/configuracions/2014/04/17/desplegar-configuracio-seguretat-java.html">Desplegar la configuració de seguretat de java a tots els usuaris d'una màquina</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">2014-04-17</span> per <span class="author">David Pascual</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        <p>Amb la versió 1.7u51 de java, oracle va donar un pas endavant en el tema de la seguretat, no permetent que els applets que no estiguen firmats ni els applets autofirmats s’executen en el nostre navegador per defecte. Encara que en l’anterior update de java ja s’advertia que aquest seria el comportament a partir de la pròxima versió i que calia començar a firmar els applets amb certificats reconeguts. Arribat el dia en que es publica aquest update, PEIM!!! una de les nostres aplicacions web, d’un proveïdor extern al qual paguem manteniment i que utilitzem a diari, continua utilitzant un applet autofirmat.</p>
+
+<p>Com que això de fer les coses be no concorda amb l’estil patri, els certificat electrònics son molt cars [ironia, dolça ironia] l’empresa en compte de firmar el seu applet correctament ens imposa:</p>
+
+<ul>
+  <li>Que baixem el nivell de seguretat de <em>Alta</em> (per defecte) a Media.</li>
+  <li>Afegir l’url de l’aplicació web a la llista d’excepcions de llocs web.</li>
+</ul>
+
+        
+            <a class="read-more" href="/configuracions/2014/04/17/desplegar-configuracio-seguretat-java.html">Continuar llegint...</a>
+        
+    </p>
+    <div class="row">
+        <div class="col-md-4 category">
+            <h4>Publicat en</h4>
+            <span class="label label-default">configuracions</span>
+        </div>
+        <div class="col-md-4 tags">
+            <h4>Etiquetes</h4>
+            
+            <span class="badge">java</span>
+            
+            <span class="badge">jre1.7u51</span>
+            
+            <span class="badge">security</span>
+            
+        </div>
+    </div>
+    <footer>
+        &nbsp;
+    </footer>
+</article>
+
+<article>
+    <header>
+        <h2><a href="/virtualitzaci%C3%B3/2014/04/11/instalar-vmware-tools-ubuntu-server.html">Instal·lar les vmware tools en una maquina ubuntu server</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">2014-04-11</span> per <span class="author">David Pascual</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        <p>Per a instal·lar les vmware tools en un servidor linux headless basat en debian, cal seguir aquestos passos.</p>
+
+<ul>
+  <li>Actualitzar el servidor</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade -y
+<span class="c"># Reiniciar el sistema si cal</span>
+</code></pre></div>
+
+<ul>
+  <li>Instal·lar els paquets necessaris per a compilar mòduls del nucli:</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">sudo apt-get -y install linux-headers-server build-essential
+</code></pre></div>
+
+<ul>
+  <li>Crear el punt de muntatge per al cdrom (si no existeix):</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">sudo mkdir /media/cdrom
+</code></pre></div>
+
+<ul>
+  <li>
+    <p>“Introduir” el CD de les vmware tools, des de el VMware Workstation sel·leccionar <strong>Guest –&gt; Install/Upgrade VMware Tools</strong>.</p>
+  </li>
+  <li>
+    <p>Muntar el cdrom:</p>
+  </li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">sudo mount /dev/cdrom /media/cdrom
+</code></pre></div>
+
+<ul>
+  <li>Copiar el comprimit amb l’instal·lador al disc local:</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">cp /media/cdrom/VM*.tar.gz /tmp
+</code></pre></div>
+
+<ul>
+  <li>Entrar en el directori dels temporals.</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">cd</span> /tmp
+</code></pre></div>
+
+<ul>
+  <li>Descomprimir l’instal·lador:</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">tar xzvf VM*.tar.gz
+</code></pre></div>
+
+<ul>
+  <li>Executar l’instal·lador:</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">sudo vmware-tools-distrib/vmware-install.pl -d
+</code></pre></div>
+
+<p>El flag -d autocontesta totes les preguntes amb la resposta per defecte</p>
+
+<ul>
+  <li>Reiniciar:</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">sudo reboot
+</code></pre></div>
+
+
+
+        
+    </p>
+    <div class="row">
+        <div class="col-md-4 category">
+            <h4>Publicat en</h4>
+            <span class="label label-default">virtualització</span>
+        </div>
+        <div class="col-md-4 tags">
+            <h4>Etiquetes</h4>
+            
+            <span class="badge">vmware</span>
+            
+            <span class="badge">workstar</span>
+            
+        </div>
+    </div>
+    <footer>
+        &nbsp;
+    </footer>
+</article>
+
+<article>
+    <header>
+        <h2><a href="/virtualitzacio/2013/02/27/reset-activacio-windows-maquina-virtualitzada.html">Resetejar activació windows al virtualitzar màquina física</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">2013-02-27</span> per <span class="author">David Pascual</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        <p>De vegades he tingut que virtualitzar màquines windows que estan en producció, per a trastejar amb programes que estan instal·lats en la màquina sense repercutir en la màquina en producció per exemple. Però al tractar-se de windows hi ha un problema, al virtualitzar windows detecta que massa coses han canviat en el hardware que suporta la versió de windows i el sistema antipirateria de windows bota demanant que s’active windows en línia, no deixant que s’inicie sessió si es fa l’activació. Açò es quelcom problemàtic ja que es tracta d’un duplicat d’una màquina en producció (destinada a proves) i probablement si s’activa la llicencia de la màquina en producció quede invalidada.</p>
+
+<p>Com a solució, ja que es tracta d’una màquina que sols va a utilitzar-se temporalment per a proves, es pot reiniciar el període d’activació de windows i aixi la màquina passa a demanar que s’ha d’activar windows en 30 dies si no es bloquejarà. Per a fer-ho:</p>
+
+<ul>
+  <li>Arrancar el windows en <em>Modo a prueba de fallos con simbolo del sistema</em>, ja que en aquest mode ens deixa iniciar sessió i “botar-nos” la protecció de l’activació.</li>
+  <li>Executar el següent comando en la consola:</li>
+</ul>
+
+<div class="highlight"><pre><code class="powershell"><span class="n">rundll32</span><span class="p">.</span><span class="n">exe</span> <span class="n">syssetup</span><span class="p">,</span><span class="n">SetupOobeBnk</span>
+</code></pre></div>
+
+<ul>
+  <li>Reiniciar el sistema.</li>
+</ul>
+
+<p>Al reiniciar el sistema ja podrem entrar, i l’únic que ens apareixerà es un missatge de que la nostra còpia de windows no està activada i pop-up de que tenim 30 dies per activar windows.</p>
+
+<p>Solució trobada <a href="http://shayandes.blogspot.com.es/2011/07/vmware-p2v-conversion-windows-xp.html">via</a>.</p>
+
+
+        
+    </p>
+    <div class="row">
+        <div class="col-md-4 category">
+            <h4>Publicat en</h4>
+            <span class="label label-default">virtualitzacio</span>
+        </div>
+        <div class="col-md-4 tags">
+            <h4>Etiquetes</h4>
+            
+            <span class="badge">vmware</span>
+            
+            <span class="badge">P2V</span>
+            
+            <span class="badge">windows</span>
+            
+            <span class="badge">activació</span>
+            
+            <span class="badge">inici sessió</span>
+            
+        </div>
+    </div>
+    <footer>
+        &nbsp;
+    </footer>
+</article>
+
+<article>
+    <header>
+        <h2><a href="/python/2013/01/31/LlancardebuggerPython.html">Llançar el depurador en python</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">2013-01-31</span> per <span class="author">David Pascual</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        <p>Per a posar un breakpoint i llançar el depurador en python simplement amb aquestes dues línies:</p>
+
+<div class="highlight"><pre><code class="python"><span class="kn">import</span> <span class="nn">pdb</span>
+
+<span class="c"># Alla on volem posar el break point:</span>
+<span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Fent açò ens apareixerà en la consola en la que hem llançat l’interpret de python una consola per traçar l’execució del programa, veure el contingut de les variables de l’entorn d’execució on hem posat el breakpoint, etc.</p>
+
+<p>Simplement awesome.</p>
+
+<p>Molt util per a debugejar aplicacionetes <a href="http://flask.pocoo.org/">Flask</a></p>
+
+
+        
+    </p>
+    <div class="row">
+        <div class="col-md-4 category">
+            <h4>Publicat en</h4>
+            <span class="label label-default">python</span>
+        </div>
+        <div class="col-md-4 tags">
+            <h4>Etiquetes</h4>
+            
+            <span class="badge">python</span>
+            
+            <span class="badge">debugger</span>
+            
+        </div>
+    </div>
+    <footer>
+        &nbsp;
+    </footer>
+</article>
+
+<article>
+    <header>
+        <h2><a href="/software/2013/01/23/ModificarFontGUIThunderbird.html">Canviar font de la GUI del thunderbird</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">2013-01-23</span> per <span class="author">David Pascual</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        <p>En la carpeta del perfil d’usuari (en OSX <em>/Users/xoner/Library/Thunderbird/Profiles/xxxxxxxxx.default</em>) crear una carpeta que s’anomene <strong>chrome</strong> i crear en ella un fitxer que s’anomene <strong>userChrome.css</strong>. Posar el següent codi per a fer thunderbird més mac-frinedly:</p>
+
+<div class="highlight"><pre><code class="css"><span class="o">*</span> <span class="p">{</span>
+	<span class="k">font-size</span><span class="o">:</span> <span class="m">14px</span> <span class="cp">!important</span><span class="p">;</span>
+	<span class="k">font-family</span><span class="o">:</span> <span class="s2">&quot;Lucida Grande&quot;</span><span class="o">,</span> <span class="n">Arial</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Se suposa que este truquet també ha de funcionar amb firefox, si es coloca una fixer chrome/userChrome.css en la carpeta del perfil de firefox.</p>
+
+
+        
+    </p>
+    <div class="row">
+        <div class="col-md-4 category">
+            <h4>Publicat en</h4>
+            <span class="label label-default">software</span>
+        </div>
+        <div class="col-md-4 tags">
+            <h4>Etiquetes</h4>
+            
+            <span class="badge">thunderbird</span>
+            
+            <span class="badge">gui</span>
+            
+            <span class="badge">font</span>
+            
+        </div>
+    </div>
+    <footer>
+        &nbsp;
+    </footer>
+</article>
+
+<article>
+    <header>
+        <h2><a href="/windows/2009/11/24/FerExtensioExecutablePython.html">Fer els fitxers amb certa extensió executables en windows</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">2009-11-24</span> per <span class="author">David Pascual Rocher</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        <p>En el mundillo unix fer un script executable es quelcom tan senzil com donar-li permisos d’execució al fitxer i posar en la primera lina del script el path de l’executable que interpretará l’script. En windows aço no es posible, no obstant es pot associar a cada extensió de fitxer amb quin programá s’ha d’executar per defecte . En aquest exemple farem que el scripts python (*.py) s’executen amb IronPython (implementació de python sobre .net de Microsoft).</p>
+
+<h3 id="crear-clau-per-a-lextensi-darxiu">Crear clau per a l’extensió d’arxiu</h3>
+
+<ol>
+  <li>Obrir el editor de registre de windows i sobre la clau HKEY_CLASS_ROOT crear una nova clau amb l’extensió que volem fer executable (en el nostre cas “.py”)</li>
+  <li>Sobre aquesta nova clau que hem creat, crear nou valor amb aquestos valors:</li>
+</ol>
+
+<table class="table table-bordered" style="max-width:475px;margin:0 auto">
+    <thead>
+        <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Content</td><td>Type</td><td>REG_SZ  text/plain</td></tr>
+    </tbody>
+</table>
+
+<ol>
+  <li>Sobre aquesta nova clau que hem creat en el valor predeterminat canviar les dades per a que quede de la següent forma:</li>
+</ol>
+
+<table class="table table-bordered" style="max-width:475px;margin:0 auto">
+    <thead>
+        <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>(Predeterminado)</td><td>REG_SZ</td><td>IronPython.File</td></tr>
+    </tbody>
+</table>
+
+<h3 id="crear-una-clau-per-al-tipus-darxiu">Crear una clau per al tipus d’arxiu</h3>
+
+<p>1.Sobre la clau HKEY_CLASS_ROOT crear una nova clau amb el valor de les dades en el valor predeterminat, valor introduït en el punt anterior (En el nostre cas “IronPython.File”)
+2.Sobre la clau creada en el pas anterior crear una sub clau anomenada shell
+3.Sobre la clau creada en el pas anterior crear una sub clau anomenada open, editar la clau predeterminada per a que tinga els següents valors:</p>
+
+<table class="table table-bordered" style="max-width:475px;margin:0 auto">
+    <thead>
+        <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>(Predeterminado)</td><td>REG_SZ</td><td>Open</td></tr>
+    </tbody>
+</table>
+
+<p>4.Sobre la clau creada en el pas anterior crear una sub clau anomenada command
+5.Editar el valor predeterminat de la clau creada en el pas anterior per a que quede de la següent forma:</p>
+
+<table class="table table-bordered" style="max-width:645px;margin:0 auto">
+    <thead>
+        <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>(Predeterminado)</td><td>REG_SZ</td><td>“C:\Archivos de programa\IronPython 2.6\ipy.exe” “%1″ %*</td></tr>
+    </tbody>
+</table>
+
+<p><span class="label label-warning">Nota!!: </span> C:\Archivos de programa\IronPython 2.6\ipy.exe es la ruta cap a l’executable d’IronPython.</p>
+
+
+        
+    </p>
+    <div class="row">
+        <div class="col-md-4 category">
+            <h4>Publicat en</h4>
+            <span class="label label-default">windows</span>
+        </div>
+        <div class="col-md-4 tags">
+            <h4>Etiquetes</h4>
+            
+            <span class="badge">windows</span>
+            
+            <span class="badge">extension</span>
+            
+            <span class="badge">executable</span>
+            
+        </div>
+    </div>
+    <footer>
+        &nbsp;
+    </footer>
+</article>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer-separator">&nbsp;</div>
+    <footer id="page-footer">
+        <div id="creative-commons">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Xoner's blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://xoner.org" property="cc:attributionName" rel="cc:attributionURL">David Pascual Rocher</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+        </div>
+    </footer>
+    
+</body>
+</html>

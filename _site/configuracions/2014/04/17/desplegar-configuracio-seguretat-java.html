@@ -1,0 +1,159 @@
+<html lang="ca-es">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Source Code Pro&subset=latin" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <meta charset="utf-8">
+    <title>Xoner's blog</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="/css/pygments-zenburn.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <div class="gravatar">
+                    <img src="http://www.gravatar.com/avatar/2c8b92bb34b04196e94c5cfa6bba2cde?s=150" alt="gravatar-image" class="img-circle">
+                </div>
+                <h1 id="main-header"><a href="/">Xoner's blog</a></h1>
+                <p class="slogan hidden-phone">
+                    Plana web i blog personal de David Pascual Rocher. Desenvolupador web i sysadmin.
+                </p>
+                <div class="links hidden-phone">
+    <ul class="links-collection">
+        <li>
+            <a href="https://github.com/xoner">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/xoner81">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="http://es.linkedin.com/pub/david-pascual-rocher/b/241/840">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+            <div class="col-md-9 main-content">
+                <article>
+    <header>
+        <h2><a href="/configuracions/2014/04/17/desplegar-configuracio-seguretat-java.html">Desplegar la configuració de seguretat de java a tots els usuaris d'una màquina</a></h2>
+        <div class="info pull-right">
+            Publicat el <span class="pub-date">2014-04-17</span> per <span class="author">David Pascual</span>
+        </div>
+    </header>
+    <div class="clearfix">&nbsp;</div>
+    <p class="article-content">
+        <p>Amb la versió 1.7u51 de java, oracle va donar un pas endavant en el tema de la seguretat, no permetent que els applets que no estiguen firmats ni els applets autofirmats s’executen en el nostre navegador per defecte. Encara que en l’anterior update de java ja s’advertia que aquest seria el comportament a partir de la pròxima versió i que calia començar a firmar els applets amb certificats reconeguts. Arribat el dia en que es publica aquest update, PEIM!!! una de les nostres aplicacions web, d’un proveïdor extern al qual paguem manteniment i que utilitzem a diari, continua utilitzant un applet autofirmat.</p>
+
+<p>Com que això de fer les coses be no concorda amb l’estil patri, els certificat electrònics son molt cars [ironia, dolça ironia] l’empresa en compte de firmar el seu applet correctament ens imposa:</p>
+
+<ul>
+  <li>Que baixem el nivell de seguretat de <em>Alta</em> (per defecte) a Media.</li>
+  <li>Afegir l’url de l’aplicació web a la llista d’excepcions de llocs web.</li>
+</ul>
+
+<div id="extended">&nbsp;</div>
+
+<p>Cosa que està molt be, i podria resumir-se amb aquesta conversa imaginaria:</p>
+
+<ul>
+  <li>(Usuari) Ei que oracle ha tret una actualització de seguretat i la vostra aplicació no funciona. Caldria que firmareu el vostre applet.</li>
+  <li>(Proveïdor) No em toques els collons, me la sua el que diga un grapat d’enginyers sobre seguretat. Desfés totes les millores de seguretat i a fer feina.</li>
+</ul>
+
+<div class="img-centered">
+    <img src="/img/memes/are-you-serious.jpg" alt="Are you serious" title="Are you serious" />
+</div>
+
+<p>Com que estem terriblement lligats al servici que ens proporciona el proveïdor i sabent que el entrar en una discussió amb el proveïdor sobre que és el que s’ha de fer i que no sols allargaria el temps d’inactivitat dels usuaris sense treure res de trellat a la fi. Decidim començar a desplegar la configuració imposada pel proveïdor. Però al desplegar la configuració en els servidors RDS, ens trobem amb un problema: La configuració de seguretat de java es a nivell d’usuari i en els nostres servidors de terminal els usuaris tenen capat el accés al <em>Panel de Control</em> cosa que fa relativament complicada la configuració usuari a usuari.</p>
+
+<p><a href="http://www.darkoperator.com/blog/2013/1/12/pushing-security-configuration-for-java-7-update-10-via-gpo.html">Buscant un poc per la xarxa</a> trobem un article que explica com gestionar la configuració de seguretat mitjançant GPOs. La idea principal es configurar un usuari amb el perfil de seguretat de java que volem i després copiar els següents fitxers:</p>
+
+<ul>
+  <li>Fitxer amb els nivells de seguretat:
+    <ul>
+      <li><code>%APPDATA%\LocalLow\Sun\Java\Deployment\deployment.properties</code> en Windows Vista o superior.</li>
+      <li><code>%APPDATA%\Sun\Java\Deployment\deployment.properties</code> en Windows XP o Server 2003.</li>
+    </ul>
+  </li>
+  <li>Fitxer amb els llocs web de confiança:
+    <ul>
+      <li><code>%APPDATA%\LocalLow\Sun\Java\Deployment\security\exception.sites</code> en Windows Vista o superior.</li>
+      <li><code>%APPDATA%\Sun\Java\Deployment\security\exception.sites</code> en Windows XP o Server 2013.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>En l’article s’utilitzen GPOs per a automatitzar el procés de còpia d’aquestos fitxers, però com que el tema de les GPOs el tenim un poc “parat”, en la nostra infraestructura hem d’utilitzar mètodes més tradicionals. Per facilitar el procés de còpia d’aquestos fitxers, sobretot en entorns de Remote Desktop, s’ha desenvolupat aquest xicotet script en powershell per automatitzar el procés de còpia, el qual busca en el directori on es troben els perfils d’usuari perfils que tinguen el directori de configuració de Java i copia la configuració de seguretat de l’usuari que executa l’script.</p>
+
+<script src="https://gist.github.com/xoner/10970093.js"></script>
+
+<p>Aixi si com a administrador actualitzem java, configurem el nivell de seguretat i els llocs web permesos i després executem l’script tindrem una configuració homogènia per a tots els usuaris.</p>
+
+    </p>
+    <div class="row">
+        <div class="col-md-4 category">
+            <h4>Publicat en</h4>
+            <span class="label">configuracions</span>
+        </div>
+        <div class="col-md-4 tags">
+            <h4>Etiquetes</h4>
+            
+            <span class="badge">java</span>
+            
+            <span class="badge">jre1.7u51</span>
+            
+            <span class="badge">security</span>
+            
+        </div>
+    </div>
+    <div id="disqus_thread"></div>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</article>
+            </div>
+        </div>
+    </div>
+    <div id="footer-separator">&nbsp;</div>
+    <footer id="page-footer">
+        <div id="creative-commons">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Xoner's blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://xoner.org" property="cc:attributionName" rel="cc:attributionURL">David Pascual Rocher</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+        </div>
+    </footer>
+    
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'xoner'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+</body>
+</html>
