@@ -7713,3 +7713,10 @@ footer {
   margin-top: 15px;
   text-align: center;
 }
+
+/* line 116, ../_sass/styles.scss */
+.img-centered img {
+  display: block;
+  margin: 10 auto;
+  width: 31%;
+}

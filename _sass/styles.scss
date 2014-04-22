@@ -111,3 +111,11 @@ footer{
     margin-top: 15px;
     text-align: center;
 }
+
+.img-centered {
+    img {
+        display: block;
+        margin: 10 auto; 
+        width: 31%
+    }
+}

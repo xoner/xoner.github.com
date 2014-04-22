@@ -11,7 +11,11 @@ layout: default
     </header>
     <div class="clearfix">&nbsp;</div>
     <p class="article-content">
-        {{ itPost.content }}
+        {{ itPost.content | summarize }}
+
+        {% if itPost.tldr %}
+            <a class="read-more" href="{{itPost.url}}">Continuar llegint...</a>
+        {% endif %}
     </p>
     <div class="row">
         <div class="col-md-4 category">
