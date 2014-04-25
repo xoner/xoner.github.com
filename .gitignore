@@ -1,6 +1,7 @@
 .sass-cache/*
 
 _theme_packages/*
+_site/*
 
 Thumbs.db
 .DS_Store
