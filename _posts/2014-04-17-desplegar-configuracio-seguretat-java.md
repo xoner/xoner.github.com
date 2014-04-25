@@ -7,11 +7,11 @@ tldr: true
 tags: [java, jre1.7u51, security]
 ---
 
-Amb la versió 1.7u51 de java, oracle va donar un pas endavant en el tema de la seguretat, no permetent que els applets que no estiguen firmats ni els applets autofirmats s'executen en el nostre navegador per defecte. Encara que en l'anterior update de java ja s'advertia que aquest seria el comportament a partir de la pròxima versió i que calia començar a firmar els applets amb certificats reconeguts. Arribat el dia en que es publica aquest update, PEIM!!! una de les nostres aplicacions web, d'un proveïdor extern al qual paguem manteniment i que utilitzem a diari, continua utilitzant un applet autofirmat.
+Amb la versió 1.7u51 de java, oracle va donar un pas endavant en el tema de la seguretat, no permetent per defecte que els applets que no estiguen firmats ni els applets autofirmats s'executen en el nostre navegador. Encara que en l'anterior update de java ja s'advertia que aquest seria el comportament a partir de la pròxima versió i que calia començar a firmar els applets amb certificats reconeguts. Arribat el dia en que es publica aquest update, PEIM!!! una de les aplicacions web que utilitzem a diari, pertanyent a un proveïdor extern al qual paguem manteniment, continua utilitzant un applet autofirmat.
 
 Com que això de fer les coses be no concorda amb l'estil patri, els certificat electrònics son molt cars [ironia, dolça ironia] l'empresa en compte de firmar el seu applet correctament ens imposa:
 
-* Que baixem el nivell de seguretat de *Alta* (per defecte) a Media.
+* Que baixem el nivell de seguretat d'*Alta* (per defecte) a *Media*.
 * Afegir l'url de l'aplicació web a la llista d'excepcions de llocs web.
 
 <div id="extended">&nbsp;</div>
