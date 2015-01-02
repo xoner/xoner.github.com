@@ -1,0 +1,124 @@
+---
+---
+
+// customize bootstrap variables here:
+//@import "variables";
+@import "bootstrap";
+
+
+body{
+    background: url('/img/background.jpg');
+    font-family: 'Merriweather', sans-serif;
+    text-align: justify;
+}
+
+#main-header {
+    font-family: 'Raleway', sans-serif;
+    color: red;
+    font-size: 2.5em;
+    text-align: center;
+
+    a, a:visited {
+        text-decoration: none;
+        color: red;
+    }
+}
+
+h2, h3, h4{
+    font-family: 'Raleway', sans-serif;
+}
+
+.tags *, .category * {
+    font-family: Raleway, Arial, Verdana
+}
+
+.highlight {
+    font-family: 'Source Code Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    code {
+        font-size: 16px;
+    }
+}
+
+.sidebar {
+    padding-top: 40px;
+
+    .slogan {
+        font-family: Raleway, Arial, Verdana;
+    }
+
+    .gravatar img {
+        margin: 0 auto;
+        display: block;
+        border: 3px solid #3F3F3F;
+    }
+}
+
+
+.main-content {
+    box-shadow: 0px -3px 10px #888;
+    padding: 0 25px 50px 25px;
+    background-color: #fff;
+
+    article {
+        margin-top: 50px;
+    }
+
+    article header h1 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+    }
+
+    article footer {
+        border-top: 2px dotted #49483E;
+    }
+}
+
+.info {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+    margin-top: -10px;
+}
+
+.links {
+    text-align: center;
+}
+
+.links-collection {
+    padding: 0;
+
+    li{
+        list-style: none;
+        display: inline-block;
+    }
+
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+
+#disqus_thread{
+    margin-top: 30px;
+}
+
+#footer-separator{
+    background-image: url('/img/separator.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+}
+
+footer{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.img-centered {
+    img {
+        display: block;
+        margin: 10 auto; 
+        width: 31%
+    }
+}

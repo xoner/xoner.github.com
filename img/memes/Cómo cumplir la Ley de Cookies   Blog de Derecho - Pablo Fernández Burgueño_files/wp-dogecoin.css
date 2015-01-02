@@ -1,0 +1,15 @@
+.wpdc_box{
+background: #eee;
+padding: 10px;
+}
+
+.wpdc_small a{
+font-size: 10px;
+cursor: help;
+font-weight: normal;
+border-bottom: 1px dashed #333;
+}
+
+.wpdc_small{
+float: right;
+}

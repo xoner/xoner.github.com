@@ -2,7 +2,7 @@
 title: Instal·lar les vmware tools en una maquina ubuntu server
 author: David Pascual
 layout: post
-category: virtualització
+category: virtualitzacio
 tags: [vmware, workstar]
 ---
 

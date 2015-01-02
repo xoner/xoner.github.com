@@ -9,5 +9,7 @@ author:
     github: https://github.com/xoner
     linkedin: http://es.linkedin.com/pub/david-pascual-rocher/b/241/840
 
-markdown: kramdown
-pygments: true
+highlighter: pygments
+
+sass:
+    sass_dir: _sass/bootstrap

@@ -1,0 +1,15 @@
+var b_txt = '';
+
+// write the badge
+	
+	
+		 	 		
+	b_txt+= '<td align="center" valign="center" style="padding:0" class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/pablofb/7355841288/"><img src="http://farm8.staticflickr.com/7085/7355841288_799f95939f_s.jpg" alt="A photo on Flickr" title="Vieja mesa de madera" height="75" width="75"></a></td>';
+	
+		 	 		
+	b_txt+= '<td align="center" valign="center" style="padding:0" class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/pablofb/7119810899/"><img src="http://farm9.staticflickr.com/8004/7119810899_ca9eab9f1f_s.jpg" alt="A photo on Flickr" title="International LAB - Edificio de Madrid Emprende" height="75" width="75"></a></td>';
+
+
+b_txt += '<span style="position:absolute;left:-999em;top:-999em;visibility:hidden" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&t=b0c00ce083d4aa61c4962cb1368a5599&fl_ev=0&lang=en&intl=es" width="0" height="0" alt="" /></span>';
+
+document.write(b_txt);
