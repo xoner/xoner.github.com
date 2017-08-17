@@ -8,6 +8,8 @@ tags: [windows, cmd, impressores]
 
 Es poden afegir impressores en Windows des de la línia de comandaments (cmd) mitjançant la 'utilitat' `rundll32 printui.dll,PrintUIEntry`.
 
+<!--more-->
+
 ### Exemples d'utilització
 
 Afegir impressora per a tots els usuaris de una màquina:

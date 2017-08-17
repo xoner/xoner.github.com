@@ -6,7 +6,27 @@ category: virtualitzacio
 tags: [vmware, workstar]
 ---
 
-Per a instal·lar les vmware tools en un servidor linux headless basat en debian, cal seguir aquestos passos.
+<div class="update">
+    <strong>Update 2017-08-17:</strong> Afegida la forma standaritzada de instal·lar les vmware tools mitjançant open-vm-tools
+</div>
+
+### Ubuntu 16.04 i posteriors
+
+Instal·lar les vmware tools és tan senzill com instal·lar el paquet `open-vm-tools`:
+
+{% highlight bash %}
+sudo apt install open-vm-tools
+{% endhighlight %}
+
+Si tenim una maquina amb escriptori també cal instal·lar el paquet `open-vm-tools-desktop` per a que també s'apliquen les millores a l'escriptori (millor rendiment driver pantalla, integracio ratolí/teclat, etc):
+
+{% highlight bash %}
+sudo apt install open-vm-tools open-vm-tools-desktop
+{% endhighlight %}
+
+
+<!--more-->
+### Pre ubuntu 16.04
 
 
 - Actualitzar el servidor

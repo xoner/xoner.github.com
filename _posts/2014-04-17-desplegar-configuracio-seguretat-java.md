@@ -14,7 +14,7 @@ Com que això de fer les coses be no concorda amb l'estil patri, els certificat 
 * Que baixem el nivell de seguretat d'*Alta* (per defecte) a *Media*.
 * Afegir l'url de l'aplicació web a la llista d'excepcions de llocs web.
 
-<div id="extended">&nbsp;</div>
+<!--more-->
 
 Cosa que està molt be, i podria resumir-se amb aquesta conversa imaginaria:
 

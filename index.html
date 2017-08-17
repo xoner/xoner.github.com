@@ -11,16 +11,7 @@ layout: default
     </header>
     <div class="clearfix">&nbsp;</div>
     <p class="article-content">
-    {% comment %}
-        {{ itPost.content | summarize }}
-
-        {% if itPost.tldr %}
-            <a class="read-more" href="{{itPost.url}}">Continuar llegint...</a>
-        {% endif %}
-    {% endcomment %}
-        <a href="{{itPost.url}}" class="btn btn-primary btn-lg">
-            Llegir article <i class="fa fa-arrow-right"></i>
-        </a>
+        {{ itPost.excerpt }}
     </p>
     <div class="row">
         <div class="col-md-4 category">
