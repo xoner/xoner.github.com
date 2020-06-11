@@ -1,15 +1,13 @@
 title: "Xoner's blog"
-slogan: "Plana web i blog personal de David Pascual Rocher. Desenvolupador web i sysadmin."
+slogan: "Pagina web y blog personal de David Pascual Rocher. Administrador de sistemas y desarrolador web."
 url: xoner.org
 
 author:
     name: David Pascual Rocher
-    email: dapasroc@me.com
+    email: dapasroc@gmail.com
     twitter: https://twitter.com/xoner81
     github: https://github.com/xoner
     linkedin: http://es.linkedin.com/pub/david-pascual-rocher/b/241/840
 
-sass:
-    sass_dir: _sass/bootstrap
 
 excerpt_separator: <!--more-->

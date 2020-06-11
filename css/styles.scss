@@ -1,125 +1,98 @@
 ---
 ---
+/* colors inspired by https://www.happyhues.co/palettes/3 */
 
-// customize bootstrap variables here:
-//@import "variables";
-@import "bootstrap";
-
-
-body{
-    background: url('/img/background.jpg');
-    font-family: 'Merriweather', sans-serif;
-    text-align: justify;
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("/fonts/proxima_ssv/ProximaNova-Regular.otf") format("opentype")
 }
 
-#main-header {
-    font-family: 'Raleway', sans-serif;
-    color: red;
-    font-size: 2.5em;
-    text-align: center;
-
-    a, a:visited {
-        text-decoration: none;
-        color: red;
-    }
+@font-face {
+    font-family: "FiraCode";
+    src: url("/fonts/fira-code/FiraCode-Regular.ttf") format("truetype")
 }
 
-h2, h3, h4{
-    font-family: 'Raleway', sans-serif;
-}
-
-.tags *, .category * {
-    font-family: Raleway, Arial, Verdana
-}
-
-.highlight {
-    font-family: 'Source Code Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    code {
-        font-size: 16px;
-    }
-}
-
-.sidebar {
-    padding-top: 40px;
-
-    .slogan {
-        font-family: Raleway, Arial, Verdana;
-        text-align: center;
-    }
-
-    .gravatar img {
-        margin: 0 auto;
-        display: block;
-        border: 3px solid #3F3F3F;
-    }
+body {
+    font-family: "Proxima Nova", sans-serif;
+    background-color: #fffffe;
+    color: #5f6c7b;
 }
 
 
-.main-content {
-    box-shadow: 0px -3px 10px #888;
-    padding: 0 25px 50px 25px;
-    background-color: #fff;
-
-    article {
-        margin-top: 50px;
+h1, h2, h3, h4 {
+    a {
+        color: #094067;
     }
+    color: #094067;
+    font-weight: bold;
 
-    article header h1 {
-        font-family: 'Raleway', sans-serif;
-        font-weight: bold;
-    }
+}
 
-    article footer {
-        border-top: 2px dotted #49483E;
-    }
+pre{
+    padding: 10px;
+    font-family: "FiraCode", monospace;
+}
+
+.language-plaintext {
+    padding: 2px;
+    background-color: #3f3f3f;
+    color: #ccc;
 }
 
 .info {
-    font-family: 'Raleway', sans-serif;
     font-size: 0.8em;
-    margin-top: -10px;
 }
 
-.links {
-    text-align: center;
-}
+.header {
+    margin-bottom: 15px;
+    background-color: #d8eefe;
 
-.links-collection {
-    padding: 0;
 
-    li{
-        list-style: none;
+    .row {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .gravatar {
+        display: inline-block;
+
+        img {
+            border-radius: 100px;
+            width: 50px;
+            margin-top: -20px;
+        }
+    }
+
+    #main-header {
+        padding-top: 4px;
+        margin: 15px;
         display: inline-block;
     }
 
-    a{
-        text-decoration: none;
-        color: #000;
+    .links{
+        text-align: right;
+        padding-top: 30px;
+        .links-collection{
+            display: inline-block;
+            margin: 0 5px;
+
+            span a{
+                text-decoration: none;
+                display: inline-block;
+            }
+        }
+    }
+
+    .slogan {
+        font-size: 0.8em;
+        padding-left: 85px;
+        margin-top: -15px;
     }
 }
 
 
-#disqus_thread{
-    margin-top: 30px;
-}
-
-#footer-separator{
-    background-image: url('/img/separator.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 25px;
-}
-
-footer{
-    margin-top: 15px;
-    text-align: center;
-}
-
-.img-centered {
-    img {
-        display: block;
-        margin: 10 auto; 
-        width: 31%
+.container {
+    article {
+        min-width: 1140px;
     }
 }

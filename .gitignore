@@ -1,5 +1,7 @@
 .sass-cache/*
 
+.jekyll-cache/
+
 _theme_packages/*
 _site/*
 
