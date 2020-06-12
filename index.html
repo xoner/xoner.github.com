@@ -6,23 +6,25 @@ layout: default
     <header>
         <h2><a href="{{itPost.url}}">{{itPost.title}}</a></h2>
         <div class="info pull-right">
-            Publicat el <span class="pub-date">{{itPost.date | date:"%Y-%m-%d"}}</span> per <span class="author">{{itPost.author}}</span>
+            Publicado el <span class="pub-date">{{itPost.date | date:"%Y-%m-%d"}}</span> por <span class="author">{{itPost.author}}</span>
         </div>
     </header>
     <div class="clearfix">&nbsp;</div>
     <p class="article-content">
         {{ itPost.excerpt }}
     </p>
-    <div class="row">
-        <div class="col-md-4 category">
-            <h4>Publicat en</h4>
+    <div class="article-meta">
+        <div class="category">
+            <h4>Publicado en</h4>
             <span class="label label-default">{{itPost.category}}</span>
         </div>
-        <div class="col-md-4 tags">
-            <h4>Etiquetes</h4>
+        <div class="tags">
+            <h4>Etiquetas</h4>
+            <div class="badge-container">
             {% for itTag in itPost.tags %}
-            <span class="badge">{{itTag}}</span>
+                <span class="badge label-default">{{itTag}}</span>
             {% endfor %}
+            </div>
         </div>
     </div>
     <footer>
