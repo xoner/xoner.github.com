@@ -48,7 +48,7 @@ Una vez realizado el upgrade a la versión 5.0 en el dashboard principal, nos ap
 
 <div style="text-align:center" markdown="1">
 
-![Error "Database history tables upgraded: No"](/img/news/20200612/dbupgradefloat.png)
+<img alt="Error 'Database history tables upgraded: No'" src="/img/news/20200612/dbupgradefloat.png" class="img-fluid">
 
 </div>
 

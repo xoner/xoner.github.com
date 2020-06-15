@@ -149,3 +149,26 @@ pre{
         }
     }
 }
+
+@media all and (max-width: 768px) { 
+    /* Tablets */
+ }
+@media all and (max-width: 480px) { 
+    /* Mobile */
+    .header {
+        text-align: center;
+        .slogan {
+            display: none;
+        }
+
+        .links {
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 10px;
+        }
+    }
+
+    .container article {
+        min-width: -webkit-fill-available;
+    }
+ }
