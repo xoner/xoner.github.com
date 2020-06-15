@@ -93,7 +93,8 @@ pre{
 
 .container {
     article {
-        min-width: 1140px;
+        min-width: 100%;
+        padding: 5px;
 
         header{
             .info {
@@ -169,6 +170,6 @@ pre{
     }
 
     .container article {
-        min-width: -webkit-fill-available;
+        /*min-width: -webkit-fill-available;*/
     }
  }
