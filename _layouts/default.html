@@ -16,21 +16,24 @@
 </head>
 <body>
     <div class="header">
-        <div class="row">
-        <div class="col-md-7">
-            <div class="gravatar">
-                <a href="/">
-                    <img src="http://www.gravatar.com/avatar/2c8b92bb34b04196e94c5cfa6bba2cde?s=150" alt="gravatar-image" class="img-circle">
-                </a>
+        <div class="upper-row">
+            <div class="logo">
+                <div class="gravatar">
+                    <a href="/">
+                        <img src="http://www.gravatar.com/avatar/2c8b92bb34b04196e94c5cfa6bba2cde?s=150" alt="gravatar-image" class="img-circle">
+                    </a>
+                </div>
+                <h1 id="main-header"><a href="/">{{site.title}}</a></h1>
             </div>
-            <h1 id="main-header"><a href="/">{{site.title}}</a></h1>
+            <div class="mid-content">&nbsp;</div>
+            <div class="links-container">
+                {% include links.html %}
+            </div>
         </div>
-        <div class="col-md-4">
-            {% include links.html %}
-        </div>
-        <p class="slogan hidden-phone">
+        <div class="lower-row">
+            <p class="slogan hidden-phone">
             {{site.slogan}}
-        </p>
+            </p>
         </div>
     </div>
     <div class="container">

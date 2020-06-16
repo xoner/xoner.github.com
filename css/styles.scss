@@ -46,11 +46,12 @@ pre{
 .header {
     margin-bottom: 15px;
     background-color: #d8eefe;
+    padding: 15px;
 
-
-    .row {
-        max-width: 1140px;
-        margin: 0 auto;
+    .upper-row {
+        display: flex;
+        justify-content: space-between;
+        
     }
 
     .gravatar {
@@ -158,6 +159,9 @@ pre{
     /* Mobile */
     .header {
         text-align: center;
+        .upper-row {
+            display: block;
+        }
         .slogan {
             display: none;
         }
