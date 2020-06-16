@@ -169,7 +169,9 @@ pre{
         }
     }
 
-    .container article {
-        /*min-width: -webkit-fill-available;*/
+    .container article{
+        .article-meta {
+            display: none;
+        }
     }
  }
