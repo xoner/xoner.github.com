@@ -1,6 +1,7 @@
 .sass-cache/*
 
 .jekyll-cache/
+.vscode/
 
 _theme_packages/*
 _site/*
