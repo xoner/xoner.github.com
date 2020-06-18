@@ -152,6 +152,33 @@ pre{
     }
 }
 
+.cookie-law-container {
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 2000;
+    position: absolute;
+    top: 0;
+    background-color: rgba($color: #3f3f3f, $alpha: 0.5);
+
+    .cookie-message {
+        position: absolute;
+        bottom: 0;
+        background-color: #3da9fc;
+        color: #fffffe;
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .image-container {
+            margin: auto
+        }
+
+        .message-container {
+            padding: 50px;
+        }
+    }
+}
+
 @media all and (max-width: 768px) { 
     /* Tablets */
  }
