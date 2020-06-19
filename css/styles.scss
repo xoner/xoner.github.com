@@ -179,9 +179,15 @@ pre{
     }
 }
 
+.ads {
+    margin: auto;
+    max-width: 800px;
+}
+
 @media all and (max-width: 768px) { 
     /* Tablets */
- }
+}
+
 @media all and (max-width: 480px) { 
     /* Mobile */
     .header {
