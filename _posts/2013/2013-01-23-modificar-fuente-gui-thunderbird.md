@@ -19,4 +19,4 @@ Editar el fichero que hemos creado anteriormente e introducir el siguiente conte
 }
 ```
 
-Se suporne que este truco también tiene que funcionar con la gui del firefox, si se coloca el fichero `chrome\userChrome.css` en la carpeta del perfil de firefox.
+Se supone que este truco también tiene que funcionar con la gui del firefox, si se coloca el fichero `chrome\userChrome.css` en la carpeta del perfil de firefox.
