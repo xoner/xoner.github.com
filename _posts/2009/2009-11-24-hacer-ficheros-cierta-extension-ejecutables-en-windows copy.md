@@ -3,7 +3,7 @@ title: Hacer que los ficheros con cierta extensión sean ejecutables en windows
 layout: post
 author: David Pascual Rocher
 category: windows
-tags: [windows, extension, executable]
+tags: [windows, extension, ejecutable]
 ---
 
 <div class="post-updates">
@@ -86,11 +86,11 @@ Set-ItemProperty -Path  HKCR:\.py -Name '(Default)' -Value 'IronPython.File'
         <tr><th>Nombre</th><th>Tipo</th><th>Datos</th></tr>
     </thead>
     <tbody>
-        <tr><td>(Predeterminado)</td><td>REG_SZ</td><td>“C:\Archivos de programa\IronPython 2.6\ipy.exe” “%1″ %*</td></tr>
+        <tr><td>(Predeterminado)</td><td>REG_SZ</td><td>“C:\Program Files\IronPython 2.7\ipy.exe” “%1″ %*</td></tr>
     </tbody>
 </table>
 
-<span class="label label-warning">Nota!!: </span> C:\Archivos de programa\IronPython 2.6\ipy.exe es la ruta cap a l’executable d’IronPython.
+<span class="label label-warning">Nota!!: </span> C:\Program Files\IronPython 2.7\ipy.exe es la ruta hacia el ejecutable de ironpython.
 
 ### Versión powershell
 
