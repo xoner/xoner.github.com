@@ -8,7 +8,7 @@ const COOKIE_HTML =[
         '<div class="message-container">',
             '<div class="message">',
                 '<p>Me obligan a molestarte con este mensaje, uso cookies (google analytics) en este sitio para poder tener una visión del publico de la pagina.</p>',
-                '<p>Si no estas conforme en compartir los datos de navegación conmigo, sepas que valoro tu privacidad y que estoy trabajando en una versión cookie free del sitio cuando se pulse <strong>Rechazar Cookies</strong></p>',
+                '<p>Si no estas conforme en compartir los datos de navegación conmigo, pulsar sobre <strong>Rechazar Cookies</strong> ofrece una versión cookieless del sitio.</p>',
             '</div>',
             '<div class="buttons">',
                 '<a id="btn-accept-cookies" class="btn btn-light btn-sm" href="#" role="button">Aceptar Cookies</a>',
