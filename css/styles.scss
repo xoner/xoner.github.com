@@ -98,6 +98,13 @@ pre{
         padding: 5px;
 
         header{
+            h2 {
+                a, a:hover {
+                    text-decoration: none;
+                }
+                border-bottom: 3px solid #094067;
+                margin-bottom: 15px;
+            }
             .info {
                 font-size: 0.7em;
                 margin-top: -10px;
