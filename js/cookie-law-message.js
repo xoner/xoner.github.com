@@ -112,7 +112,7 @@ function injectGoogleAds() {
     else{
         // User has previously accepted the cookies, do not annoy them and let 
         // google analytics do their magic.
-        injectGoogleAnalytics();
+        //injectGoogleAnalytics();
         injectGoogleAds();
     }
 })();
