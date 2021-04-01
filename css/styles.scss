@@ -111,6 +111,14 @@ pre{
             }
         }
 
+        .image {
+            margin: 0 auto;
+            text-align: center;
+            img {
+                max-width:100%
+            }
+        }
+
         .article-meta {
             display: flex;
             .category {
