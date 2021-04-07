@@ -1,6 +1,6 @@
 ---
 title: Crear galería de imágenes a partir de un conjunto estructurado de pdfs
-autor: David Pascual
+author: David Pascual
 category: programming
 layout: post
 tags: [pdf, imagenes, galeria, images, gallery]
