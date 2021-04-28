@@ -1,6 +1,6 @@
 ---
 title: Restringir una cuenta de usuario administrador (o no) a que solo pueda ejecutar ciertos programas en windows 10
-autor: David Pascual
+author: David Pascual
 category: sysadmin
 layout: post
 tags: [windows, politicas]
